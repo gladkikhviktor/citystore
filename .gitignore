@@ -1,0 +1,10 @@
+# pycache
+citystore/__pycache__
+main/__pycache__
+main/migrations/__pycache__
+main/models/__pycache__
+
+# db file
+db.sqlite3
+
+
