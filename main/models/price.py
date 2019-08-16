@@ -9,3 +9,6 @@ class Price(Common):
     date_end = models.DateField(null=True)
     product = models.ForeignKey(Product, null=True, on_delete=models.SET_NULL)
     enterprise = models.ForeignKey(Enterprise, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table='price'

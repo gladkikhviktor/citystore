@@ -6,3 +6,9 @@ from .city import City
 class District(Common):
      city = models.ForeignKey(City, on_delete=models.CASCADE)
      name = models.TextField(max_length=250, blank=False,  default='')
+
+     def __str__(self):
+      return self.name
+
+     class Meta:
+        db_table = 'district'
