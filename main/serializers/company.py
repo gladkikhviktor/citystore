@@ -9,4 +9,4 @@ class  CompanySerializer(serializers.ModelSerializer):
     city =CitySerializer()
     class Meta:
         model = Company
-        fields=['name', 'created', 'enterprise_id', 'enterprise', 'city_id', 'city']
+        fields=['id', 'name', 'created', 'enterprise', 'city']

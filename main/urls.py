@@ -17,13 +17,21 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.urls import path
 from rest_framework import routers
-from .views import EnterpriseViewSet, CompanyViewSet, CityViewSet
 
+from .views.enterprise import EnterpriseViewSet
+from .views.company import CompanyViewSet
+from .views.city import CityViewSet
+from .views.category import CategoryViewSet
+from .views.product import ProductViewSet
+from .views.price import PriceViewSet
 
 router = routers.DefaultRouter()
 router.register(r'enterprise',  EnterpriseViewSet)
 router.register(r'company', CompanyViewSet)
 router.register(r'city', CityViewSet)
+router.register(r'category', CategoryViewSet)
+router.register(r'product', ProductViewSet)
+router.register(r'price', PriceViewSet)
 
 urlpatterns = [
     path('', include(router.urls))
