@@ -37,5 +37,6 @@ router.register(r'distirict', DistrictViewSet)
 
 urlpatterns = [
     path('', include(router.urls))
+
 ]
 
