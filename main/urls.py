@@ -24,14 +24,16 @@ from .views.city import CityViewSet
 from .views.category import CategoryViewSet
 from .views.product import ProductViewSet
 from .views.price import PriceViewSet
+from .views.district import DistrictViewSet
 
 router = routers.DefaultRouter()
 router.register(r'enterprise',  EnterpriseViewSet)
-router.register(r'company', CompanyViewSet)
+router.register(r'organizations', CompanyViewSet)
 router.register(r'city', CityViewSet)
 router.register(r'category', CategoryViewSet)
 router.register(r'product', ProductViewSet)
 router.register(r'price', PriceViewSet)
+router.register(r'distirict', DistrictViewSet)
 
 urlpatterns = [
     path('', include(router.urls))
